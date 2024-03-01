@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicholas E Ortiz - Profile</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cairo+Play:wght@600&family=Montserrat:wght@300&family=VT323&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+
+        body {
+            background-color: #606060;
+            width: 100%;
+            height: 100vh;
+            background: #e7dfd7;
+            background: #393b42;
+            background-attachment: fixed;
+            --textOutline: rgba(162, 162, 175, 0.26);
+        }
+
+        .author-calc-style { 
+            font-family: 'VT323', monospace;
+            font-size: 3rem;
+            line-height: 1;
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
+            border: 2px solid #766767;
+            border-radius: 8px;
+            background: #789478;
+            color: #454545;
+            box-shadow: -5px -5px 15px #fff, 5px 5px 15px #fff3e5, inset 0px 4px 17px #4b554b52, inset -2px 0px 12px #617960;
+            text-shadow: 0 1px #a5d27e;
+        }
+
+        .author { 
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 54px;
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
+            color: #fff;
+            text-shadow: 0 1px #000000;
+        }
+
+        .author_image {
+            height: 11rem;
+            width: 11rem;
+            border-radius: 100%;
+            border: 2px solid #ffffff1f;
+        }
+
+        .card p.title { 
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 19px;
+            letter-spacing: 4px;
+            margin-top: 0;
+            color: #fff;
+            text-shadow: 0 1px #000000;
+        }
+
+        .card p {
+            font-family: "Quicksand", sans-serif;
+            font-size: 14px;
+            color: #fff;
+            text-shadow: 0 1px #000000;
+        }
+
+        .center {
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .card {
+            box-sizing: border-box;
+            border-radius: 8px;
+            color: #3c3c3c;
+            max-width: 100%;
+            width: 100%;
+            transition: max-width 0.3s ease-in-out;
+        }
+
+        @media (min-width: 768px) {
+
+            .card {
+                max-width: 400px;
+            }
+
+            .card-expand:hover{
+                max-width: 425px;
+            }
+
+            .card:first-child {
+                margin-top: 3rem;
+            }
+        }
+
+        .card:last-child {
+            margin-bottom: 5rem;
+        }
+
+        .arq {
+            padding-top: 2.5rem;
+            padding-bottom: 2.5rem;
+        }
+
+        .arl {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .aiu {
+            background-color: #dfd8d0;
+            box-shadow:
+                0 1.5em 2em -1em rgba(0,0,0,0.8),
+                inset 0 0.0625em 0 rgba(255,255,255,1),
+                inset 0 -0.125em 0.0625em rgba(0,0,0,0.3);
+
+            background: linear-gradient(145deg, #dfd8d0, #e1dad3);
+            box-shadow: -5px -5px 15px #f0e6db, 5px 5px 15px rgba(0, 0, 0, 0.1);
+
+            background: linear-gradient(145deg, #505461, #3c3e48);
+            box-shadow: -5px -5px 15px #43454e, 5px 5px 15px #2d303c;
+            border-top: 1px solid #686b79;
+            border-left: 1px solid #6a6c76;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .spacing-1 {
+            margin-top: 1rem;
+        }
+
+        .col-gap-1_5 {
+            -moz-column-gap: 1.5rem;
+            column-gap: 1.5rem;
+        }
+
+        .cl-gap-0_45 {
+            -moz-column-gap: 0.45rem;
+            column-gap: 0.45rem;
+        }
+
+        .post-container {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-direction: row;
+        }
+
+        .post-container h3 {
+            color: #fff;
+            font-family: 'Bebas Neue', sans-serif;  
+            text-align: left;
+        }
+
+        .post-container .post-image img {
+            border-bottom: 2px solid white;
+            border-right: 1px solid white;
+            max-width: 90px;
+            height: auto;
+        }
+
+        .post-container .post-content {
+            text-align: left;
+        }
+
+        .post-container p {
+            text-align: left;
+        }
+
+        .screen-reader-text {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        .ls-none {
+            list-style: none;
+            padding: 0;
+        }
+
+        .axo {
+            --tw-text-opacity: 1;
+            color: rgb(156 163 175 / var(--tw-text-opacity));
+        }
+
+        .nz {
+            height: 1.25rem;
+        }
+        .sb {
+            width: 1.25rem;
+        }
+
+        .vertical-center-helper {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            justify-content: center;
+            margin-top: 2rem;
+            margin-bottom: 8rem;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: calc(100% - 1.5rem);
+        }
+
+        .button {
+            background-color: transparent;
+            background-image: linear-gradient(#ddd, #bbb);
+            border: none;
+            border-radius: 50%;
+            width: 13rem;
+            height: 13rem;
+            display: flex;
+            align-items: center;
+            box-shadow: 
+                4px 4px 6px rgba(255,255,255,.2), 
+                5px 10px 35px rgba(0,0,0,.1),
+                8px 10px 25px rgba(0,0,0,.1),
+                inset -1px -1px 9px rgba(0,0,0,.2),
+                inset -1px -1px 3px rgba(255,255,255,.6),
+                inset 1px 1px 8px rgba(255,255,255,1),
+                inset 4px 4px 24px rgba(0,0,0,.15),
+                -5px -5px 15px rgba(255,255,255,.9);
+
+            background-image: linear-gradient(#2d2d2d, #474951);
+            box-shadow: 4px 4px 6px rgb(90 83 83 / 21%), 5px 10px 35px rgb(0 0 0 / 10%), 8px 10px 25px rgb(235 228 228 / 10%), inset -1px -1px 9px rgba(0,0,0,.2), inset -1px -1px 3px rgb(255 255 255 / 60%), inset 1px 1px 8px rgb(10 8 8), inset 4px 4px 24px rgb(120 111 133 / 23%), -5px -5px 15px rgb(35 25 25 / 38%);
+        }
+
+        .button-icon {
+            -webkit-appearance: none;
+            -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                    user-select: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            outline: none;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            transition: all 0.2s ease;
+            font-family: "Source Sans Pro", sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 4px 3px 1px #393b42, 0 6px 8px #393b42, 0 -4px 4px #393b42, 0 -6px 4px #42444a, inset 0 0 3px 0 #6b6b6b;
+        }
+
+        @media (min-width: 768px) {
+
+            .button-icon {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        .button-icon svg {
+            width: 20px;
+            fill: #b5b5b5;
+        }
+
+        .button-icon:hover svg {
+            fill: #707070;
+        }
+
+        .button-icon.button-icon_dark {
+            background-image: linear-gradient(to top, #575a67 0%, #444751 80%, #434650 100%);
+        }
+
+        .button-icon:hover {
+            box-shadow: 0 4px 3px 1px #383b41, 0 6px 8px #6e7583, 0 -4px 4px #36373a, 0 -6px 4px #10100f, inset 0 0 3px 3px #34353b;
+        }
+
+        .orange-tape {
+            background: #ffa50094;
+            padding: 20px;
+            border-bottom: 1px solid #ffeded;
+            border-top: 1px solid #ffeaea;
+            left: -33px;
+            position: relative;
+            width: calc(100% + 26px);
+        }
+
+        .card p.tape-text {
+            font-size: 39px;
+            letter-spacing: 1px;
+            color: #ffffff;
+            text-shadow: 0 1px #3434345c;
+            line-height: 1;
+            margin: 18px 0;
+        }
+
+        .grey-tape {
+            background: #20180a30;
+            padding: 20px;
+            border-bottom: 1px solid #939393;
+            border-top: 1px solid #939393;
+        }
+
+        .light {
+            min-width: 7px;
+            height: 3px;
+            border-bottom: 1px solid white;
+            border-right: 1px solid white;
+        }
+
+        .light-text {
+            color:white;
+            text-transform: uppercase;
+            font-family: 'VT323', monospace;
+            text-shadow: 0 1px #272727;
+            font-size: 12px;
+            margin-right: 2px;
+        }
+
+        .lightbar {
+            align-items: center;
+            flex-direction: row;
+            gap: 3px;
+            justify-content: flex-end;
+            margin-bottom: 3px;
+        }
+
+        .light-first {
+            background-color: rgb(0, 166, 255);
+        }
+
+        .light-second {
+            background-color: green;
+        }
+
+        .light-third {
+            background-color: rgb(255, 0, 212);
+        }
+
+        .blink {
+            animation: colorBlink 2s infinite alternate;
+            -webkit-animation: colorBlink 2s infinite alternate;
+        }
+        @keyframes colorBlink {
+            0% { background-color: red; }
+            50% { background-color: black; }
+            100% { background-color: red; }
+        }
+
+        .circle-light {
+            background-color: #f00;
+            background-image: radial-gradient(0.3em 0.25em at 50% 25%, rgb(255,255,255) 25%, rgba(255,255,255,0)), radial-gradient(0.25em 0.25em at 30% 75%, rgba(255,255,255,0.5), rgba(255,255,255,0)), radial-gradient(0.3em 0.3em at 60% 80%, rgba(255,255,255,0.5), rgba(255,255,255,0)), radial-gradient(100% 100%, rgba(255,255,255,0) 30%, rgba(255,255,255,0.3) 40%, rgba(0,0,0,0.5) 50%);
+            border-radius: 50%;
+            box-shadow: 0 0 0.75em rgb(255 255 255), 0 0.5em 0.75em rgb(35 35 35 / 30%);
+            display: inline-block;
+            transition: all var(--dur2) var(--dur2) linear;
+            width: .7em;
+            height: .7em;
+        }
+
+        .circle-light-black {
+            background-color: #000;
+        }
+
+        .circle-light-green {
+            background-color: #62b90f;
+        }
+
+        .circle-light-blue {
+            background-color: #00f;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="vertical-center-helper">
+        <div class="adq aiu arl arq center card">
+            <div class="button center">
+                <img class="center author_image" src="profile.png" alt="">
+            </div>
+            <h3 class="author spacing-1">Nicholas E Ortiz</h3>
+            <p class="title">Senior Frontend Engineer</p>
+        </div>
+
+        <div class="adq aiu arl arq center card card-expand">
+            <ul role="list" class="spacing-1 flex center ls-none cl-gap-0_45">
+                <li>
+                    <a href="https://github.com/nickortiz" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="axo bku button-icon button-icon_dark">
+                        <span class="screen-reader-text">Github</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                            <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/nickeortiz/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="axo bku button-icon button-icon_dark">
+                        <span class="screen-reader-text">LinkedIn</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/illuminortii/" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="axo bku button-icon button-icon_dark">
+                        <span class="screen-reader-text">Instagram</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.threads.net/@illuminortii" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="axo bku button-icon button-icon_dark">
+                        <span class="screen-reader-text">Threads</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M331.5 235.7c2.2 .9 4.2 1.9 6.3 2.8c29.2 14.1 50.6 35.2 61.8 61.4c15.7 36.5 17.2 95.8-30.3 143.2c-36.2 36.2-80.3 52.5-142.6 53h-.3c-70.2-.5-124.1-24.1-160.4-70.2c-32.3-41-48.9-98.1-49.5-169.6V256v-.2C17 184.3 33.6 127.2 65.9 86.2C102.2 40.1 156.2 16.5 226.4 16h.3c70.3 .5 124.9 24 162.3 69.9c18.4 22.7 32 50 40.6 81.7l-40.4 10.8c-7.1-25.8-17.8-47.8-32.2-65.4c-29.2-35.8-73-54.2-130.5-54.6c-57 .5-100.1 18.8-128.2 54.4C72.1 146.1 58.5 194.3 58 256c.5 61.7 14.1 109.9 40.3 143.3c28 35.6 71.2 53.9 128.2 54.4c51.4-.4 85.4-12.6 113.7-40.9c32.3-32.2 31.7-71.8 21.4-95.9c-6.1-14.2-17.1-26-31.9-34.9c-3.7 26.9-11.8 48.3-24.7 64.8c-17.1 21.8-41.4 33.6-72.7 35.3c-23.6 1.3-46.3-4.4-63.9-16c-20.8-13.8-33-34.8-34.3-59.3c-2.5-48.3 35.7-83 95.2-86.4c21.1-1.2 40.9-.3 59.2 2.8c-2.4-14.8-7.3-26.6-14.6-35.2c-10-11.7-25.6-17.7-46.2-17.8H227c-16.6 0-39 4.6-53.3 26.3l-34.4-23.6c19.2-29.1 50.3-45.1 87.8-45.1h.8c62.6 .4 99.9 39.5 103.7 107.7l-.2 .2zm-156 68.8c1.3 25.1 28.4 36.8 54.6 35.3c25.6-1.4 54.6-11.4 59.5-73.2c-13.2-2.9-27.8-4.4-43.4-4.4c-4.8 0-9.6 .1-14.4 .4c-42.9 2.4-57.2 23.2-56.2 41.8l-.1 .1z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://masto.ai/@nort" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="axo bku button-icon button-icon_dark">
+                        <span class="screen-reader-text">Mastadon</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M433 179.1c0-97.2-63.7-125.7-63.7-125.7-62.5-28.7-228.6-28.4-290.5 0 0 0-63.7 28.5-63.7 125.7 0 115.7-6.6 259.4 105.6 289.1 40.5 10.7 75.3 13 103.3 11.4 50.8-2.8 79.3-18.1 79.3-18.1l-1.7-36.9s-36.3 11.4-77.1 10.1c-40.4-1.4-83-4.4-89.6-54a102.5 102.5 0 0 1 -.9-13.9c85.6 20.9 158.7 9.1 178.8 6.7 56.1-6.7 105-41.3 111.2-72.9 9.8-49.8 9-121.5 9-121.5zm-75.1 125.2h-46.6v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.3V197c0-58.5-64-56.6-64-6.9v114.2H90.2c0-122.1-5.2-147.9 18.4-175 25.9-28.9 79.8-30.8 103.8 6.1l11.6 19.5 11.6-19.5c24.1-37.1 78.1-34.8 103.8-6.1 23.7 27.3 18.4 53 18.4 175z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/Illuminortii" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="axo bku button-icon button-icon_dark">
+                        <span class="screen-reader-text">X</span>
+                        <svg class="nz sb" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M11.4678 8.77491L17.2961 2H15.915L10.8543 7.88256L6.81232 2H2.15039L8.26263 10.8955L2.15039 18H3.53159L8.87581 11.7878L13.1444 18H17.8063L11.4675 8.77491H11.4678ZM9.57608 10.9738L8.95678 10.0881L4.02925 3.03974H6.15068L10.1273 8.72795L10.7466 9.61374L15.9156 17.0075H13.7942L9.57608 10.9742V10.9738Z"></path>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="adq aiu arl arq center card">
+            <p> With over a decade of dedicated experience in frontend development, I bring a proven track record of delivering high-quality, 
+                scalable solutions for a diverse range of projects. Proficient in the latest technologies and frameworks, 
+                I excel in crafting intuitive user interfaces that seamlessly blend functionality with aesthetic appeal. </p>
+        </div>
+        
+    </div>
+</body>
+</html>

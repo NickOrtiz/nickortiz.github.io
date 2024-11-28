@@ -1,8 +1,57 @@
+:root {
+	--bg-color: #b7b7b7;
+	--text-color: #000;
+	--text-shadow: 0 1px #fff;
+	--card-bg: #f0f0f0;
+	--shadow-color: rgba(0, 0, 0, 0.1);
+	--toggle-bg: #e0e0e0;
+	--toggle-handle: #ffffff;
+
+	--card-bg: #dadada;
+	--card-border-top: 1px solid #f1eeee;
+	--card-border-left: 1px solid #ebebeb;
+	--card-shadow: none;
+
+	--separator: 1px solid #b7b7b7;
+	--separator-border: 1px solid #f5f0f0;
+
+	--author-box-shadow: 4px 4px 6px rgb(90 83 83 / 21%), 5px 10px 35px rgb(0 0 0 / 10%), 8px 10px 25px rgb(235 228 228 / 10%), inset -1px -1px 9px rgba(0, 0, 0, .2), inset -1px -1px 3px rgb(255 255 255 / 60%), inset 1px 1px 8px rgb(44 44 44), inset 4px 4px 24px rgb(120 111 133 / 23%), -5px -5px 15px rgb(35 25 25 / 38%);
+	--author-background: linear-gradient(#cdcaca, #afafb1);
+
+	--button-bg: linear-gradient(to top, #ebebeb 0%, #cbcbcb 80%, #ffffff 100%);
+	--button-pressed:  0 0px 4px 1px #909aae, 0 11px 6px #f2f2f2, 0 1px 1px #ffffff, 0 0px 0px #ffffff, inset 0 0 6px 5px #c8c8c8;
+	--button-shadow: 0 -1px 7px 2px #aca8a8, 0 5px 13px #ffffff, 0 -3px 4px #868686, 0 -7px 9px #ffffff, inset 0 0 3px 0 #6b6b6b;
+}
+
+[data-theme="dark"] {
+	--bg-color: #1f1f22;
+	--text-color: #ffffff;
+	--text-shadow: 0 1px #000000;
+	--card-bg: #222222;
+	--shadow-color: rgba(75, 49, 49, 0.1);
+	--toggle-bg: #444444;
+	--toggle-handle: #666666;
+
+	--card-bg: linear-gradient(145deg, #505461, #3c3e48);
+	--card-border-top: 1px solid #686b79;
+	--card-border-left: 1px solid #6a6c76;
+	--card-shadow: -5px -5px 15px #23242a, 5px 5px 15px #0b0c11;
+
+	--separator: 1px solid #2f3035;
+	--separator-border: 1px solid #020202;
+
+	--author-box-shadow: 4px 4px 6px rgb(90 83 83 / 21%), 5px 10px 35px rgb(0 0 0 / 10%), 8px 10px 25px rgb(235 228 228 / 10%), inset -1px -1px 9px rgba(0,0,0,.2), inset -1px -1px 3px rgb(255 255 255 / 60%), inset 1px 1px 8px rgb(10 8 8), inset 4px 4px 24px rgb(120 111 133 / 23%), -5px -5px 15px rgb(35 25 25 / 38%);
+	--author-background: linear-gradient(#2d2d2d, #474951);
+
+	--button-bg: linear-gradient(to top, #575a67 0%, #444751 80%, #434650 100%);
+	--button-pressed:  0 4px 3px 1px #383b41, 0 6px 8px #6e7583, 0 -4px 4px #36373a, 0 -6px 4px #10100f, inset 0 0 3px 3px #34353b;
+	--button-shadow: 0 4px 3px 1px #393b42, 0 6px 8px #393b42, 0 -4px 4px #393b42, 0 -6px 4px #42444a, inset 0 0 3px 0 #6b6b6b;
+}
+
 body {
-	background-color: #606060;
 	width: 100%;
 	height: 100vh;
-	background: #2f3035;
+	background: var(--bg-color);
 	background-attachment: fixed;
 	margin: 0;
 	padding: 0;
@@ -35,14 +84,14 @@ body {
 
 /* Author Styles */
 .author { 
-	color: #fff;
+	color: var(--text-color);
 	font-family: 'Bebas Neue', sans-serif;
 	font-size: 54px;
 	letter-spacing: 3px;
 	margin: 0;
 	padding: 0;
 	text-transform: uppercase;
-	text-shadow: 0 1px #000000;
+	text-shadow: var(--text-shadow);
 }
 
 .author_image {
@@ -52,9 +101,22 @@ body {
 	border: 2px solid #ffffff1f;
 }
 
+.author-frame {
+	background-color: transparent;
+	border: none;
+	border-radius: 50%;
+	width: 13rem;
+	height: 13rem;
+	display: flex;
+	align-items: center;
+
+	background-image: var(--author-background);
+	box-shadow: var(--author-box-shadow);
+}
+
 /* Card Styles */
 .card a {
-	color: #fff;
+	color: var(--text-color);
 	text-decoration: none;
 }
 
@@ -65,8 +127,8 @@ body {
 	font-size: 19px;
 	letter-spacing: 3px;
 	margin-top: 0;
-	color: #fff;
-	text-shadow: 0 1px #000000;
+	color: var(--text-color);
+	text-shadow: var(--text-shadow);
 }
 
 .column-2 .card {
@@ -83,32 +145,31 @@ body {
 	font-size: 12px;
 	letter-spacing: 3px;
 	margin-top: 0;
-	color: #fff;
-	text-shadow: 0 1px #000000;
+	color: var(--text-color);
+	text-shadow: var(--text-shadow);
 	text-transform: uppercase;
 }
 
 .card hr {
-	border: 1px solid #2f3035;
-	outline: 1px solid #020202;
+	border: var(--separator);
+	outline: var(--separator-border);
 	margin: 2rem 4rem;
 }
 
 .card p {
 	font-family: "Quicksand", sans-serif;
 	font-size: 14px;
-	color: #fff;
-	text-shadow: 0 1px #000000;
+	color: var(--text-color);
+	text-shadow: var(--text-shadow);
 }
 
 .card {
-	background-color: #dfd8d0;
-	background: linear-gradient(145deg, #505461, #3c3e48);
-	box-shadow: -5px -5px 15px #23242a, 5px 5px 15px #2d303c;
+	background: var(--card-bg);
+	box-shadow: var(--card-shadow);
 	box-sizing: border-box;
-	border-top: 1px solid #686b79;
-	border-left: 1px solid #6a6c76;
-	border-radius: 8px;
+	border-top: var(--card-border-top);
+	border-left: var(--card-border-left);
+	border-radius: 3px;
 	color: #3c3c3c;
 	max-width: 100%;
 	padding: 2.5rem 2rem;
@@ -192,29 +253,6 @@ body {
 
 
 /* Buttons & Icons */
-.button {
-	background-color: transparent;
-	background-image: linear-gradient(#ddd, #bbb);
-	border: none;
-	border-radius: 50%;
-	width: 13rem;
-	height: 13rem;
-	display: flex;
-	align-items: center;
-	box-shadow: 
-		4px 4px 6px rgba(255,255,255,.2), 
-		5px 10px 35px rgba(0,0,0,.1),
-		8px 10px 25px rgba(0,0,0,.1),
-		inset -1px -1px 9px rgba(0,0,0,.2),
-		inset -1px -1px 3px rgba(255,255,255,.6),
-		inset 1px 1px 8px rgba(255,255,255,1),
-		inset 4px 4px 24px rgba(0,0,0,.15),
-		-5px -5px 15px rgba(255,255,255,.9);
-
-	background-image: linear-gradient(#2d2d2d, #474951);
-	box-shadow: 4px 4px 6px rgb(90 83 83 / 21%), 5px 10px 35px rgb(0 0 0 / 10%), 8px 10px 25px rgb(235 228 228 / 10%), inset -1px -1px 9px rgba(0,0,0,.2), inset -1px -1px 3px rgb(255 255 255 / 60%), inset 1px 1px 8px rgb(10 8 8), inset 4px 4px 24px rgb(120 111 133 / 23%), -5px -5px 15px rgb(35 25 25 / 38%);
-}
-
 .button-icon {
 	-webkit-appearance: none;
 	-webkit-user-select: none;
@@ -222,7 +260,7 @@ body {
 		-ms-user-select: none;
 			user-select: none;
 	
-	background-image: linear-gradient(to top, #575a67 0%, #444751 80%, #434650 100%);
+	background-image: var(--button-bg);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -235,7 +273,7 @@ body {
 	font-family: "Source Sans Pro", sans-serif;
 	font-size: 14px;
 	font-weight: 600;
-	box-shadow: 0 4px 3px 1px #393b42, 0 6px 8px #393b42, 0 -4px 4px #393b42, 0 -6px 4px #42444a, inset 0 0 3px 0 #6b6b6b;
+	box-shadow: var(--button-shadow);
 }
 
 @media (min-width: 768px) {
@@ -256,5 +294,78 @@ body {
 }
 
 .button-icon:hover {
-	box-shadow: 0 4px 3px 1px #383b41, 0 6px 8px #6e7583, 0 -4px 4px #36373a, 0 -6px 4px #10100f, inset 0 0 3px 3px #34353b;
+	box-shadow: var(--button-pressed);
+}
+
+/* Theme Switch for lightmode/darkmode */
+.theme-switch-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+}
+
+.theme-switch {
+	display: inline-block;
+	position: relative;
+	width: 80px;
+	height: 40px;
+}
+
+.theme-switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--toggle-bg);
+	border-radius: 20px;
+	box-shadow: 4px 4px 6px rgb(90 83 83 / 21%), 5px 10px 35px rgb(0 0 0 / 10%), 8px 10px 25px rgb(235 228 228 / 10%), inset -1px -1px 9px rgba(0,0,0,.2), inset -1px -1px 3px rgb(255 255 255 / 60%), inset 1px 1px 8px rgb(10 8 8), inset 4px 4px 24px rgb(120 111 133 / 23%), -5px -5px 15px rgb(35 25 25 / 38%);
+	transition: .4s;
+}
+
+.slider-handle {
+	position: absolute;
+	content: "";
+	height: 34px;
+	width: 34px;
+	left: 3px;
+	bottom: 3px;
+	background-color: var(--toggle-handle);
+	border-radius: 50%;
+	transition: .4s;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input:checked + .slider .slider-handle {
+	transform: translateX(40px);
+}
+
+.sun, .moon {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 7px;
+	left: 7px;
+	fill: #000;
+}
+
+.moon {
+	fill: #ffffff;
+	opacity: 0;
+}
+
+input:checked + .slider .moon {
+	opacity: 1;
+}
+
+input:checked + .slider .sun {
+	opacity: 0;
 }

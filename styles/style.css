@@ -120,7 +120,7 @@ body {
 	text-decoration: none;
 }
 
-.card p.title,
+p.title,
 .card h2,
 .card h3:not(.author) { 
 	font-family: 'Bebas Neue', sans-serif;
@@ -187,7 +187,8 @@ body {
 		max-width: 425px;
 	}
 
-	.card:first-child {
+	.card:first-child,
+	.no-card:first-child {
 		margin-top: 3rem;
 	}
 }

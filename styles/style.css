@@ -17,13 +17,6 @@ body {
 	padding-bottom: 4rem;
 }
 
-.flex {
-	display: flex;
-	flex-direction: row;
-	gap: 2rem;
-	justify-content: space-evenly;
-}
-
 @media (max-width: 768px) {
 	.main-contain.flex {
 		flex-direction: column;
@@ -40,11 +33,7 @@ body {
 	margin: 0 auto;
 }
 
-.column-2 .card {
-	max-width: 100%;
-	text-align: center;
-}
-
+/* Author Styles */
 .author { 
 	color: #fff;
 	font-family: 'Bebas Neue', sans-serif;
@@ -63,6 +52,12 @@ body {
 	border: 2px solid #ffffff1f;
 }
 
+/* Card Styles */
+.card a {
+	color: #fff;
+	text-decoration: none;
+}
+
 .card p.title,
 .card h2,
 .card h3:not(.author) { 
@@ -74,13 +69,13 @@ body {
 	text-shadow: 0 1px #000000;
 }
 
-.column-2 .card h3:not(.author) {
-	font-size: 34px;
+.column-2 .card {
+	max-width: 100%;
+	text-align: center;
 }
 
-.card a {
-	color: #fff;
-	text-decoration: none;
+.column-2 .card h3:not(.author) {
+	font-size: 34px;
 }
 
 .card h4 {
@@ -106,20 +101,19 @@ body {
 	text-shadow: 0 1px #000000;
 }
 
-.center {
-	justify-content: center;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-}
-
 .card {
+	background-color: #dfd8d0;
+	background: linear-gradient(145deg, #505461, #3c3e48);
+	box-shadow: -5px -5px 15px #23242a, 5px 5px 15px #2d303c;
 	box-sizing: border-box;
+	border-top: 1px solid #686b79;
+	border-left: 1px solid #6a6c76;
 	border-radius: 8px;
 	color: #3c3c3c;
 	max-width: 100%;
-	width: 100%;
+	padding: 2.5rem 2rem;
 	transition: max-width 0.3s ease-in-out;
+	width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -137,56 +131,37 @@ body {
 	}
 }
 
-.aiu {
-	background-color: #dfd8d0;
-	background: linear-gradient(145deg, #505461, #3c3e48);
-	box-shadow: -5px -5px 15px #23242a, 5px 5px 15px #2d303c;
-	border-top: 1px solid #686b79;
-	border-left: 1px solid #6a6c76;
-	padding: 2.5rem 2rem;
+/* Utility Classes */
+.center {
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
 
 .flex {
 	display: flex;
+	flex-direction: row;
+	gap: 2rem;
+	justify-content: space-evenly;
 }
 
-.spacing-1 {
-	margin-top: 1rem;
-}
-
+/* Column Gap Utility Class */
+/* used for: */
+/* - Social Icons */
 .cl-gap-0_45 {
 	-moz-column-gap: 0.45rem;
 	column-gap: 0.45rem;
 }
 
-.post-container {
-	display: flex;
-	gap: 1rem;
-	align-items: center;
-	flex-direction: row;
+/* Spacing Utility */
+/* used for: */
+/* - Author Bio Title */
+.spacing-1 {
+	margin-top: 1rem;
 }
 
-.post-container h3 {
-	color: #fff;
-	font-family: 'Bebas Neue', sans-serif;  
-	text-align: left;
-}
-
-.post-container .post-image img {
-	border-bottom: 2px solid white;
-	border-right: 1px solid white;
-	max-width: 90px;
-	height: auto;
-}
-
-.post-container .post-content {
-	text-align: left;
-}
-
-.post-container p {
-	text-align: left;
-}
-
+/* Screen Reader Text */
 .screen-reader-text {
 	position: absolute;
 	width: 1px;
@@ -199,23 +174,13 @@ body {
 	border-width: 0;
 }
 
+/* Remove List Styles */
 .ls-none {
 	list-style: none;
 	padding: 0;
 }
 
-.axo {
-	--tw-text-opacity: 1;
-	color: rgb(156 163 175 / var(--tw-text-opacity));
-}
-
-.nz {
-	height: 1.25rem;
-}
-.sb {
-	width: 1.25rem;
-}
-
+/* Vertical Center Helper */
 .vertical-center-helper {
 	min-height: 100vh;
 	display: flex;
@@ -225,6 +190,8 @@ body {
 	max-width: calc(95% - 1.5rem);
 }
 
+
+/* Buttons & Icons */
 .button {
 	background-color: transparent;
 	background-image: linear-gradient(#ddd, #bbb);
@@ -254,6 +221,8 @@ body {
 		-moz-user-select: none;
 		-ms-user-select: none;
 			user-select: none;
+	
+	background-image: linear-gradient(to top, #575a67 0%, #444751 80%, #434650 100%);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -286,19 +255,6 @@ body {
 	fill: #707070;
 }
 
-.button-icon.button-icon_dark {
-	background-image: linear-gradient(to top, #575a67 0%, #444751 80%, #434650 100%);
-}
-
 .button-icon:hover {
 	box-shadow: 0 4px 3px 1px #383b41, 0 6px 8px #6e7583, 0 -4px 4px #36373a, 0 -6px 4px #10100f, inset 0 0 3px 3px #34353b;
-}
-
-.card p.tape-text {
-	font-size: 39px;
-	letter-spacing: 1px;
-	color: #ffffff;
-	text-shadow: 0 1px #3434345c;
-	line-height: 1;
-	margin: 18px 0;
 }

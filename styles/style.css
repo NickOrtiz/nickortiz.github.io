@@ -250,6 +250,16 @@ p.title,
 	gap: 1.25rem;
 	margin: 0 auto;
 	max-width: calc(95% - 1.5rem);
+	width: auto;
+
+}
+
+@media (max-width: 768px) {
+
+	.vertical-center-helper {
+		min-height: 100%;
+		width: 100%;
+	}
 }
 
 
@@ -379,7 +389,6 @@ input:checked + .slider .sun {
 .status-bubble {
 	position: absolute;
 	bottom: 0;
-	right: 0;
 	background: linear-gradient(145deg, #ffffff, #e6e6e6);
 	padding: 6px 14px 6px 26px;
 	border-radius: 20px;

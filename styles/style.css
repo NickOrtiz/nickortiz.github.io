@@ -160,7 +160,7 @@ p.title,
 
 p.spacing-year {
 	background: var(--separator-color);
-	margin: -5rem auto 2.5rem;
+	margin: -4.75rem auto 2.5rem;
 	outline: 1px solid #595959;
 	padding: .25rem;
 	position: relative;

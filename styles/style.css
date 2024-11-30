@@ -116,11 +116,6 @@ body {
 	height: auto;
 	display: flex;
 	align-items: center;
-
-	/*
-	background-image: var(--author-background);
-	box-shadow: var(--author-box-shadow);
-	*/
 }
 
 /* Card Styles */
@@ -190,13 +185,7 @@ p.spacing-year {
 }
 
 .card {
-	/* background: var(--card-bg); */
-	/* box-shadow: var(--card-shadow); */
 	box-sizing: border-box;
-	/* 
-	border-top: var(--card-border-top);
-	border-left: var(--card-border-left);
-	*/
 	border-radius: 3px;
 	color: #3c3c3c;
 	max-width: 100%;
@@ -301,7 +290,6 @@ p.left-align {
 		width: 100%;
 	}
 }
-
 
 /* Buttons & Icons */
 .button-icon {

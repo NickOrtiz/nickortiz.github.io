@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	const navLinks = document.querySelectorAll('.nav-link');
 	// Only select sections that are not columns
 	const sections = document.querySelectorAll('section:not(.column-1):not(.column-2)');
+	const navHeight = document.querySelector('.main-nav').offsetHeight;
+	const navList = document.querySelector('.nav-list');
+	const menuToggle = document.querySelector('.menu-toggle');
 	
 	const updateActiveSection = (hash) => {
 		navLinks.forEach(link => link.classList.remove('active'));
@@ -42,7 +45,20 @@ document.addEventListener('DOMContentLoaded', () => {
 				targetSection.style.transition = 'opacity 0.4s ease-in';
 				targetSection.style.opacity = 1;
 			}, 10);
+
+			// Smooth scroll to the section with offset
+			const offset= 16; // additional padding
+			const elementPosition = targetSection.getBoundingClientRect().top;
+			const offsetPosition = elementPosition - navHeight - offset;
+
+			window.scrollBy({
+				top: offsetPosition,
+				behavior: 'smooth'
+			});
 		}
+
+		menuToggle.setAttribute('aria-expanded', 'false');
+		navList.classList.remove('active');
 	};
 	
 	navLinks.forEach(link => {

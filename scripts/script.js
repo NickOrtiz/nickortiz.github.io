@@ -1,6 +1,7 @@
 const checkbox = document.getElementById('checkbox');
 const theme = localStorage.getItem('theme');
 
+// Theme (dark/light) picker JS
 if (theme === 'dark') {
 	document.documentElement.setAttribute('data-theme', 'dark');
 	checkbox.checked = true;
@@ -16,6 +17,7 @@ checkbox.addEventListener('change', function() {
 	}
 });
 
+// Handling Navigation
 document.addEventListener('DOMContentLoaded', () => {
 	const navLinks = document.querySelectorAll('.nav-link');
 	// Only select sections that are not columns
@@ -57,4 +59,24 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 	
 	updateActiveSection(window.location.hash);
+});
+
+// Mobile Menu
+document.addEventListener('DOMContentLoaded', () => {
+	const menuToggle = document.querySelector('.menu-toggle');
+	const navList = document.querySelector('.nav-list');
+
+	menuToggle?.addEventListener('click', () => {
+		const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+		menuToggle.setAttribute('aria-expanded', !isExpanded);
+		navList.classList.toggle('active');
+	});
+
+	// Close menu when clicking outside
+	document.addEventListener('click', (e) => {
+		if (!navList.contains(e.target) && !menuToggle.contains(e.target)) {
+			menuToggle.setAttribute('aria-expanded', 'false');
+			navList.classList.remove('active');
+		}
+	});
 });

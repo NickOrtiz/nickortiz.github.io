@@ -57,7 +57,7 @@ body {
 	background: var(--bg-color);
 	background-attachment: fixed;
 	font-family: var(--f-soft);
-	height: 100vh;
+	height: auto;
 	margin: 0;
 	padding: 0;
 	width: 100%;

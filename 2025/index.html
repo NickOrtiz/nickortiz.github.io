@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Template</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oranienbaum&display=swap" rel="stylesheet">
+
+      
+    <style>
+        html {
+            background-color: #161c1c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        body {
+            background-color: #161c1c;
+            background: url("pattern.png");
+            color: white;
+            font-family: "Oranienbaum", serif;
+            font-weight: 400;
+            font-style: normal;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background: #000;
+            padding: 1rem;
+            position: relative;
+            border-bottom: 1px solid #e6cc90;
+        }
+
+        .nav-brand {
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+        }
+
+        .nav-menu li a {
+            color: white;
+            text-decoration: none;
+            padding: 0 1rem;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('hero-orig.jpeg');
+            background-size: cover;
+            background-position: bottom;
+            border-bottom: 1px solid #e6cc90;
+            height: 35vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 6rem;
+            margin-bottom: 0;
+            line-height: .75;
+        }
+
+        .hero-content h2 {
+            letter-spacing: 2.3px;
+            font-size: 2rem;
+        }
+
+        /* Cards Section */
+        .cards {
+            display: flex;
+            justify-content: space-around;
+            padding: 6rem 2rem;
+            flex-wrap: wrap;
+            gap: 2rem;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        .card {
+            flex: 1;
+            min-width: 300px;
+            max-width: 350px;
+            padding: 2rem;
+            border-radius: 5px;
+            text-align: center;
+
+            border: 1px solid #252929;
+            -webkit-box-shadow: 0px 13px 139px -43px rgba(0,0,0,0.77);
+            -moz-box-shadow: 0px 13px 139px -43px rgba(0,0,0,0.77);
+            box-shadow: 0px 13px 139px -43px rgba(0,0,0,0.77);
+        }
+
+        .card .thumb {
+            width: 100%;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            max-height: 240px;
+            margin-bottom: 1rem;
+        }
+
+        .card .thumb img {
+            max-width: 100%;
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                width: 100%;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: #000;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                padding: 1rem;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+        }
+
+        .sub-nav-logo {
+            padding: 1.25rem;
+        }
+
+        .highlight-color {
+            color: #e6cc90;
+        }
+
+        .align-center {
+            text-align: center;
+        }
+
+        .content-container {
+            max-width: 1600px;
+            margin: auto;
+        }
+
+        .experience {
+            background-color: #2f3424;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.9)), url('exp.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-top: 3px solid black;
+            padding: 4rem;
+        }
+
+        .experience-brands {
+            display: flex;
+            justify-content: space-around;
+            padding: 4rem 2rem;
+            flex-wrap: wrap;
+            gap: 2rem;
+            width: 100%;
+            max-width: 1600px;
+            margin: auto;
+        }
+
+        .professional-experience {
+            background-color: #000;
+        }
+
+        .brand {
+            max-width: 100px;
+        }
+
+        .brand img {
+            width: 100%;
+        }
+
+        h1, .heading, h3 {
+            font-family: "Cinzel Decorative", serif;
+        }
+
+        h2 {
+            font-family: "Oranienbaum", serif;
+        }
+
+        .large-text {
+            font-size: 1.5rem;
+
+            @media (min-height: 800px) {
+                font-size: 4.5rem;
+            }
+        }
+
+        .screen-reader-text {
+            border-width: 0;
+            clip: rect(0, 0, 0, 0);
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            position: absolute;
+            overflow: hidden;
+            width: 1px;
+            white-space: nowrap;
+        }
+
+
+        .accordion {
+            background-color: #161c1c;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid #1c1c1c;
+        }
+
+        .accordion-item:last-child {
+            border-bottom: none;
+        }
+
+        .accordion-header {
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            transition: background-color 0.3s;
+        }
+
+        .accordion-header:hover,
+        .accordion-header.active {
+            background-color: #121616;
+        }
+
+        .company-logo {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            margin-right: 1rem;
+            object-fit: contain;
+        }
+
+        .company-info {
+            flex-grow: 1;
+        }
+
+        .company-name {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .company-period {
+            font-family: 'Courier New', monospace;
+            color: white;
+            font-size: 0.875rem;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: #161c1c;
+            background: url("pattern.png");
+            text-align: left;
+        }
+
+        .accordion-content.active {
+            max-height: 500px;
+        }
+
+        .content-inner {
+            padding: 3rem 2rem;
+            border-top: 1px solid #e6cc90;
+            border-bottom: 1px solid #e6cc90;
+        }
+
+        .job-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #e6cc90;
+        }
+
+        .job-description {
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .highlights {
+            list-style-type: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .highlight-item {
+            color: black;
+            background: #e6cc90;
+            padding: .5rem;
+            border-radius: 8px;
+            font-size: 13px;
+        }
+
+        .highlight-item::before {
+            content: "•";
+            position: absolute;
+            left: 0.5rem;
+        }
+
+        .arrow {
+            margin-left: auto;
+            transition: transform 0.3s;
+            max-width: 30px;
+        }
+
+        .arrow img {
+            max-width: 100%;
+        }
+
+        .accordion-header.active .arrow {
+            transform: rotate(180deg);
+        }
+
+
+        .social-icons-list {
+            display: flex;
+            list-style-type: none;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .social-icons-list li:hover svg {
+            fill: #e6cc90;
+        }
+
+        .social-icons-list svg {
+            fill: white;
+            width: 16px;
+            transition: fill 0.3s;
+        }
+
+        .introduction {
+            background: #00000045;
+            padding: 6rem;
+            border: 2px solid #000;
+            border-left: 0;
+            border-right: 0;
+        }
+
+        .introduction-content {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-height: 800px) {
+
+            .introduction-content {
+                flex-direction: row;
+            }
+        }
+  
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Experience</a></li>
+        </ul>
+    </nav>
+    <section class="hero">
+        <div class="hero-content align-center">
+            <h1>Nick Ortiz</h1>
+            <h2 class="smalltext highlight-color">Senior Frontend Engineer</h2>
+
+            <div class="social-icons">
+                <ul role="list" class="social-icons-list">
+					<li>
+						<a href="https://github.com/nickortiz" target="_blank" rel="noopener noreferrer" class="button-icon">
+							<span class="screen-reader-text">Github</span>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+								<path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.linkedin.com/in/nickeortiz/" target="_blank" rel="noopener noreferrer" class="button-icon">
+							<span class="screen-reader-text">LinkedIn</span>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+								<path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"></path>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.instagram.com/illuminortii/" target="_blank" rel="noopener noreferrer" class="button-icon">
+							<span class="screen-reader-text">Instagram</span>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+								<path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.threads.net/@illuminortii" target="_blank" rel="noopener noreferrer" class="button-icon">
+							<span class="screen-reader-text">Threads</span>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+								<path d="M331.5 235.7c2.2 .9 4.2 1.9 6.3 2.8c29.2 14.1 50.6 35.2 61.8 61.4c15.7 36.5 17.2 95.8-30.3 143.2c-36.2 36.2-80.3 52.5-142.6 53h-.3c-70.2-.5-124.1-24.1-160.4-70.2c-32.3-41-48.9-98.1-49.5-169.6V256v-.2C17 184.3 33.6 127.2 65.9 86.2C102.2 40.1 156.2 16.5 226.4 16h.3c70.3 .5 124.9 24 162.3 69.9c18.4 22.7 32 50 40.6 81.7l-40.4 10.8c-7.1-25.8-17.8-47.8-32.2-65.4c-29.2-35.8-73-54.2-130.5-54.6c-57 .5-100.1 18.8-128.2 54.4C72.1 146.1 58.5 194.3 58 256c.5 61.7 14.1 109.9 40.3 143.3c28 35.6 71.2 53.9 128.2 54.4c51.4-.4 85.4-12.6 113.7-40.9c32.3-32.2 31.7-71.8 21.4-95.9c-6.1-14.2-17.1-26-31.9-34.9c-3.7 26.9-11.8 48.3-24.7 64.8c-17.1 21.8-41.4 33.6-72.7 35.3c-23.6 1.3-46.3-4.4-63.9-16c-20.8-13.8-33-34.8-34.3-59.3c-2.5-48.3 35.7-83 95.2-86.4c21.1-1.2 40.9-.3 59.2 2.8c-2.4-14.8-7.3-26.6-14.6-35.2c-10-11.7-25.6-17.7-46.2-17.8H227c-16.6 0-39 4.6-53.3 26.3l-34.4-23.6c19.2-29.1 50.3-45.1 87.8-45.1h.8c62.6 .4 99.9 39.5 103.7 107.7l-.2 .2zm-156 68.8c1.3 25.1 28.4 36.8 54.6 35.3c25.6-1.4 54.6-11.4 59.5-73.2c-13.2-2.9-27.8-4.4-43.4-4.4c-4.8 0-9.6 .1-14.4 .4c-42.9 2.4-57.2 23.2-56.2 41.8l-.1 .1z"></path>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="https://masto.ai/@nort" target="_blank" rel="noopener noreferrer" class="button-icon">
+							<span class="screen-reader-text">Mastadon</span>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+								<path d="M433 179.1c0-97.2-63.7-125.7-63.7-125.7-62.5-28.7-228.6-28.4-290.5 0 0 0-63.7 28.5-63.7 125.7 0 115.7-6.6 259.4 105.6 289.1 40.5 10.7 75.3 13 103.3 11.4 50.8-2.8 79.3-18.1 79.3-18.1l-1.7-36.9s-36.3 11.4-77.1 10.1c-40.4-1.4-83-4.4-89.6-54a102.5 102.5 0 0 1 -.9-13.9c85.6 20.9 158.7 9.1 178.8 6.7 56.1-6.7 105-41.3 111.2-72.9 9.8-49.8 9-121.5 9-121.5zm-75.1 125.2h-46.6v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.3V197c0-58.5-64-56.6-64-6.9v114.2H90.2c0-122.1-5.2-147.9 18.4-175 25.9-28.9 79.8-30.8 103.8 6.1l11.6 19.5 11.6-19.5c24.1-37.1 78.1-34.8 103.8-6.1 23.7 27.3 18.4 53 18.4 175z"></path>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="https://bsky.app/profile/nickortiz.com" target="_blank" rel="noopener noreferrer" class="button-icon">
+							<span class="screen-reader-text">Bluesky</span>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+								<path d="M407.8 294.7c-3.3-.4-6.7-.8-10-1.3c3.4 .4 6.7 .9 10 1.3zM288 227.1C261.9 176.4 190.9 81.9 124.9 35.3C61.6-9.4 37.5-1.7 21.6 5.5C3.3 13.8 0 41.9 0 58.4S9.1 194 15 213.9c19.5 65.7 89.1 87.9 153.2 80.7c3.3-.5 6.6-.9 10-1.4c-3.3 .5-6.6 1-10 1.4C74.3 308.6-9.1 342.8 100.3 464.5C220.6 589.1 265.1 437.8 288 361.1c22.9 76.7 49.2 222.5 185.6 103.4c102.4-103.4 28.1-156-65.8-169.9c-3.3-.4-6.7-.8-10-1.3c3.4 .4 6.7 .9 10 1.3c64.1 7.1 133.6-15.1 153.2-80.7C566.9 194 576 75 576 58.4s-3.3-44.7-21.6-52.9c-15.8-7.1-40-14.9-103.2 29.8C385.1 81.9 314.1 176.4 288 227.1z"></path>
+							</svg>
+						</a>
+					</li>
+				</ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="cards">
+        <div class="card">
+            <div class="thumb">
+                <img src="triad-1.jpeg">
+            </div>
+            <h3>Frontend Engineering Architecture</h3>
+            <p>Optimized systems built with the latest technologies: TypeScript, React, JavaScript, Node, Vue</p>
+        </div>
+        <div class="card">
+            <div class="thumb">
+                <img src="triad-2.jpeg">
+            </div>
+            <h3>Optimization</h3>
+            <p>Efficient programming & styling patterns, Optimizing UI/UX, and evaluating lighthouse scores and pagespeed field data</p>
+        </div>
+        <div class="card">
+            <div class="thumb">
+                <img src="triad-3.jpeg">
+            </div>
+            <h3>Accessibility First</h3>
+            <p>Ensuring that nobody is left behind and everyone is thought if is the easiest path to success</p>
+        </div>
+    </section>
+
+
+    <section class="introduction">
+        <div class="introduction-content">
+            <div class="content-image">
+                <img src="NickOrtiz-halftone.webp">
+            </div>
+            <div class="content-container">
+                <h2>Digital Architect. Strategic Innovator.</h2>
+                <h3>Building what others can't imagine.</h3>
+                <br />
+
+                <p>
+                    <ul>
+                        <li><strong>Frontend Architecture:</strong> Crafting sophisticated JavaScript and React solutions that drive business growth.</li>
+                        <li><strong>WordPress Evolution:</strong> Pushing boundaries to unlock unprecedented platform capabilities.</li>
+                        <li><strong>Performance Engineering: </strong>Transforming sluggish systems into high-velocity digital assets.</li>
+                        <li><strong>Human-Centric Design: </strong>Creating seamless experiences for users across all abilities.</li>
+                    </ul>
+
+                    I transform complex technical challenges into elegant digital solutions. With over a decade leading remote teams, I've mastered the art of turning constraints into competitive advantages. <br/>
+                    My work doesn't just solve problems—it creates opportunities. Every line of code advances your strategic vision and strengthens your market position.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience"> 
+        <h2 class="heading large-text align-center">ProfessioNal<br/> Experience</h2>
+    </section>
+
+    <section class="professional-experience">
+        <div class="content-container align-center">
+            
+            <div class="accordion">
+                <article class="accordion-item">
+                    <button class="accordion-header active" onclick="toggleAccordion(this)">
+                        <img src="history/fueled-emblem.jpg" alt="Current Company logo" class="company-logo">
+                        <div class="company-info">
+                            <div class="company-name">10up / Fueled</div>
+                            <div class="company-period">2022 - Present</div>
+                        </div>
+                        <span class="arrow"><img src="arrow-icon.png"></span>
+                    </button>
+                    <div class="accordion-content active">
+                        <div class="content-inner">
+                            <h2 class="job-title">Senior Frontend Engineer</h2>
+                            <p class="job-description">Leading technical strategy for complex web projects, mentoring developers, and driving innovation in frontend development methodologies. Architecting scalable solutions that bridge creative vision with technical excellence.</p>
+                            <ul class="highlights">
+                                <li class="highlight-item">WCAG 2.1</li>
+                                <li class="highlight-item">React</li>
+                                <li class="highlight-item">Headless</li>
+                                <li class="highlight-item">Storybook</li>
+                                <li class="highlight-item">Full-Site Editing</li>
+                                <li class="highlight-item">Gutenberg</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <img src="history/10up-logo.png" alt="Previous Corp logo" class="company-logo">
+                        <div class="company-info">
+                            <div class="company-name">10up</div>
+                            <div class="company-period">2018 - 2022</div>
+                        </div>
+                        <span class="arrow"><img src="arrow-icon.png"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <h2 class="job-title">Frontend Engineer</h2>
+                            <p class="job-description">Developed responsive, high-performance websites for enterprise clients. Specialized in creating pixel-perfect designs, optimizing user experiences, and implementing robust accessibility standards.</p>
+                            <ul class="highlights">
+                                <li class="highlight-item">Vue.js</li>
+                                <li class="highlight-item">WordPress</li>
+                                <li class="highlight-item">Javascript ES6+</li>
+                                <li class="highlight-item">Performance Optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <img src="history/cornershop-creative-logo.jpeg" alt="Previous Corp logo" class="company-logo">
+                        <div class="company-info">
+                            <div class="company-name">Cornershop Creative</div>
+                            <div class="company-period">2013 - 2018</div>
+                        </div>
+                        <span class="arrow"><img src="arrow-icon.png"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <h2 class="job-title">Full-Stack WordPress Developer</h2>
+                            <p class="job-description">Crafted custom WordPress solutions including advanced multi-user platforms, complex API integrations, and scalable content management systems. Managed full-cycle web development from concept to deployment.</p>
+                            <ul class="highlights">
+                                <li class="highlight-item">PHP</li>
+                                <li class="highlight-item">WordPress</li>
+                                <li class="highlight-item">Advanced Custom Fields</li>
+                                <li class="highlight-item">WooCommerce</li>
+                                <li class="highlight-item">Custom Themes & Plugins</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <img src="history/ryno-logo-2.jpeg" alt="Previous Corp logo" class="company-logo">
+                        <div class="company-info">
+                            <div class="company-name">Ryno Technologies</div>
+                            <div class="company-period">2011 - 2012</div>
+                        </div>
+                        <span class="arrow"><img src="arrow-icon.png"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <h2 class="job-title">WordPress Developer & Designer</h2>
+                            <p class="job-description">Designed custom WordPress themes with advanced content architecture, focusing on flexible and functional web solutions tailored to specific client needs.</p>
+                            <ul class="highlights">
+                                <li class="highlight-item">HTML5</li>
+                                <li class="highlight-item">CSS3</li>
+                                <li class="highlight-item">jQuery</li>
+                                <li class="highlight-item">WordPress</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+                <article class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <img src="history/cnm-logo.png" alt="Previous Corp logo" class="company-logo">
+                        <div class="company-info">
+                            <div class="company-name">Central New Mexico Community College</div>
+                            <div class="company-period">2009 - 2011</div>
+                        </div>
+                        <span class="arrow"><img src="arrow-icon.png"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <h2 class="job-title">Instructional Technician</h2>
+                            <p class="job-description">Provided comprehensive technical support across programming and networking labs, demonstrating expertise in multiple programming languages and educational technology.</p>
+                            <ul class="highlights">
+                                <li class="highlight-item">Troubleshooting</li>
+                                <li class="highlight-item">Lab Management</li>
+                                <li class="highlight-item">IT Infrastructure</li>
+                                <li class="highlight-item">C++</li>
+                                <li class="highlight-item">Python</li>
+                                <li class="highlight-item">Java</li>
+                                <li class="highlight-item">Networking Fundamentals</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+
+        <div class="content-container align-center">
+            <h2>Trusted by These Leading Brands <br/> to Elevate Their Digital Vision</h2>
+        </div>
+       <div class="experience-brands">
+        <div class="brand">
+            <img src="brands/salesforce-logo.webp">
+        </div>
+        <div class="brand">
+            <img src="brands/microsoft-logo.webp">
+        </div>
+        <div class="brand">
+            <img src="brands/creditkarma-logo.webp">
+        </div>
+        <div class="brand">
+            <img src="brands/meta-logo.webp">
+        </div>
+        <div class="brand">
+            <img src="brands/samsung-logo.webp">
+        </div>
+        <div class="brand">
+            <img src="brands/starbucks-logo.webp">
+        </div>
+        <div class="brand">
+            <img src="brands/phillips66-logo.webp">
+        </div>
+        <div class="brand">
+            <img src="brands/hilton-logo.webp">
+        </div>
+        <div class="brand">
+            <img src="brands/cleveland-clinic-logo.webp">
+        </div>
+        <div class="brand">
+            <img src="brands/TripAdvisor-logo.webp">
+        </div>
+        <div class="brand">
+            <img src="brands/boston-logo.webp">
+        </div>
+       </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 NickOrtiz.com. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-menu');
+            menu.classList.toggle('active');
+        }
+
+        function toggleAccordion(header) {
+            const allHeaders = document.querySelectorAll('.accordion-header');
+            const allContents = document.querySelectorAll('.accordion-content');
+            
+            // Close all other sections
+            allHeaders.forEach(h => {
+                if (h !== header) h.classList.remove('active');
+            });
+            allContents.forEach(content => content.classList.remove('active'));
+            
+            // Toggle the clicked section
+            header.classList.toggle('active');
+            const content = header.nextElementSibling;
+            content.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

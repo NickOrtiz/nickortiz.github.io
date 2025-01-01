@@ -1,65 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Nick Ortiz - Senior Frontend Engineer. Explore my biography, professional achievements, and connect with me through social media links.">
-	<title>Nick Ortiz - Senior Frontend Engineer</title>
-	<link rel="preload"
-		  href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Quicksand:wght@300..700&amp;display=swap" 
-		  as="style" 
-		  onload="this.onload=null;this.rel='stylesheet'"
-		  >
-	<link rel="stylesheet" href="styles/style.css">
+    <title>Nick Ortiz - Senior Frontend Engineer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oranienbaum&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-	<nav class="main-nav">
-		<button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-			<span class="hamburger-icon"></span>
-		</button>
-		<div class="main-contain">
-			<ul role="list" class="nav-list">
-				<li class="nav-item">
-					<a href="#about" class="nav-link active">About</a>
-				</li>
-				<li class="nav-item">
-					<a href="#portfolio" class="nav-link">Portfolio</a>
-				</li>
-				<li class="nav-item">
-					<a href="#experience" class="nav-link">Experience</a>
-				</li>
-			</ul>
+    <nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#About">About</a></li>
+            <li><a href="#Experience">Experience</a></li>
+        </ul>
+    </nav>
+    <section class="hero">
+        <div class="hero-content align-center">
+            <h1>Nick Ortiz</h1>
+            <h2 class="smalltext highlight-color">Senior Frontend Engineer</h2>
 
-			<div class="theme-switch-wrapper">
-				<label class="theme-switch" for="checkbox">
-					<input type="checkbox" id="checkbox" />
-					<div class="slider">
-						<div class="slider-handle">
-							<svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-								<path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/>
-							</svg>
-							<svg class="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-								<path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/>
-							</svg>
-						</div>
-					</div>
-				</label>
-			</div>
-		</div>
-	</nav>
-	<main class="flex main-contain">
-		<section class="column-1 vertical-center-helper">
-			<div class="no-card">
-				<div class="center">
-					<div class="author-frame center">
-						<img class="center author_image" src="images/profile/NickOrtiz-halftone.webp" alt="Profile Picture of Nick Ortiz">
-					</div>
-					<h3 class="author spacing-1">Nick Ortiz</h3>
-					<p class="title">Senior Frontend Engineer</p>
-				</div>
-			</div>
-			<div class="card card-expand">
-				<ul role="list" class="spacing-1 flex center ls-none cl-gap-0_45">
+            <div class="social-icons">
+                <ul role="list" class="social-icons-list">
 					<li>
 						<a href="https://github.com/nickortiz" target="_blank" rel="noopener noreferrer" class="button-icon">
 							<span class="screen-reader-text">Github</span>
@@ -104,240 +75,319 @@
 						<a href="https://bsky.app/profile/nickortiz.com" target="_blank" rel="noopener noreferrer" class="button-icon">
 							<span class="screen-reader-text">Bluesky</span>
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-								<path d="M407.8 294.7c-3.3-.4-6.7-.8-10-1.3c3.4 .4 6.7 .9 10 1.3zM288 227.1C261.9 176.4 190.9 81.9 124.9 35.3C61.6-9.4 37.5-1.7 21.6 5.5C3.3 13.8 0 41.9 0 58.4S9.1 194 15 213.9c19.5 65.7 89.1 87.9 153.2 80.7c3.3-.5 6.6-.9 10-1.4c-3.3 .5-6.6 1-10 1.4C74.3 308.6-9.1 342.8 100.3 464.5C220.6 589.1 265.1 437.8 288 361.1c22.9 76.7 49.2 222.5 185.6 103.4c102.4-103.4 28.1-156-65.8-169.9c-3.3-.4-6.7-.8-10-1.3c3.4 .4 6.7 .9 10 1.3c64.1 7.1 133.6-15.1 153.2-80.7C566.9 194 576 75 576 58.4s-3.3-44.7-21.6-52.9c-15.8-7.1-40-14.9-103.2 29.8C385.1 81.9 314.1 176.4 288 227.1z"/>
+								<path d="M407.8 294.7c-3.3-.4-6.7-.8-10-1.3c3.4 .4 6.7 .9 10 1.3zM288 227.1C261.9 176.4 190.9 81.9 124.9 35.3C61.6-9.4 37.5-1.7 21.6 5.5C3.3 13.8 0 41.9 0 58.4S9.1 194 15 213.9c19.5 65.7 89.1 87.9 153.2 80.7c3.3-.5 6.6-.9 10-1.4c-3.3 .5-6.6 1-10 1.4C74.3 308.6-9.1 342.8 100.3 464.5C220.6 589.1 265.1 437.8 288 361.1c22.9 76.7 49.2 222.5 185.6 103.4c102.4-103.4 28.1-156-65.8-169.9c-3.3-.4-6.7-.8-10-1.3c3.4 .4 6.7 .9 10 1.3c64.1 7.1 133.6-15.1 153.2-80.7C566.9 194 576 75 576 58.4s-3.3-44.7-21.6-52.9c-15.8-7.1-40-14.9-103.2 29.8C385.1 81.9 314.1 176.4 288 227.1z"></path>
 							</svg>
 						</a>
 					</li>
 				</ul>
-			</div>
-		</section>
-		<section class="column-2">
+            </div>
+        </div>
+    </section>
 
-			<section id="about" class="card card-about card-active" aria-hidden="false">
-				<h3 class="spacing-1">Nick Ortiz</h3>
-				<h4>Senior Frontend Engineer</h4>
-				
-				<hr />
-				<p class="professional-description left-align">
-					I Don't Build Websites. I Create Digital Strategies That Elevate Businesses.
-				</p>
-				<p class="professional-description left-align">
-					<strong>Core Competencies</strong>
-				</p>
-				<p class="professional-description left-align">
-					<ul class="professional-description left-align">
-						<li>
-							<strong>Frontend Architecture:</strong> Intelligent JavaScript and React ecosystems
-						</li>
-						<li>
-							<strong>WordPress Mastery:</strong> Tailored solutions that extend platform capabilities beyond conventional limitations
-						</li>
-						<li>
-							<strong>Performance Optimization:</strong> Strategic enhancements that dismantle inefficiency
-						</li>
-						<li>
-							<strong>Accessibility Engineering:</strong> Designing interfaces that leave no user behind
-						</li>
-					</ul>
-				</p>
-				<p class="professional-description left-align">
-					Code is more than syntax—it's a strategic solution to complex challenges. I transform technical constraints into innovative digital experiences that bridge cutting-edge technology with meaningful user interactions.
-				</p>
-				<p class="professional-description left-align">
-					With over a decade of remote work experience, I've mastered leadership across distributed teams. I excel at navigating complex technological landscapes, mentoring emerging talent, and creating high-performance environments that turn potential barriers into collaborative opportunities.
-				</p>
-				<p class="professional-description left-align">
-					My Goal is to always craft digital experiences that don't just meet expectations, but redefine them.
-				</p>
-			</section>
+    <section class="cards">
+        <div class="card">
+            <div class="thumb">
+                <img
+                    alt="A well lit factory room growing moss"
+                    width="284"
+                    height="284"
+                    src="images/triad-1.avif">
+            </div>
+            <h3>PerformaNce</h3>
+            <p>Crafting lightning-fast digital experiences that convert.</p>
+        </div>
+        <div class="card">
+            <div class="thumb">
+                <img
+                    alt="A black rock with a tuft of plant growing through" 
+                    width="284"
+                    height="284"
+                    src="images/triad-2.avif">
+            </div>
+            <h3>InNovation</h3>
+            <p>Transforming complex requirements into elegant solutions using modern tools.</p>
+        </div>
+        <div class="card">
+            <div class="thumb">
+                <img
+                    alt="Moss growing on statue of a human face" 
+                    width="284"
+                    height="284"
+                    src="images/triad-3.avif">
+            </div>
+            <h3>Scalability</h3>
+            <p>Engineering robust systems that grow with your business.</p>
+        </div>
+    </section>
 
-			<section id="experience" class="card-experience" aria-hidden="true">
-				<div class="card">
-					<h3 class="spacing-1">Professional Experience</h3>
-					<hr />
-					<p class="spacing-year">2022 - Present</p>
-					<div class="spacing-1">
-						<h4 class="spacing-1">Senior Frontend Engineer</h4>
-						<p class="spacing-1">10up</p>
-						<p class="professional-description">
-							Leading technical strategy for complex web projects, mentoring developers, and driving innovation in frontend development methodologies. Architecting scalable solutions that bridge creative vision with technical excellence.
-						</p>
-						<ul class="tech-stack">
-							<li>WCAG 2.1</li>
-							<li>Typescript</li>
-							<li>React</li>
-							<li>Headless CMS</li>
-							<li>Storybook</li>
-						</ul>
-					</div>
-					<hr />
-					<p class="spacing-year">2018 - 2022</p>
-					<div class="spacing-1">
-						<h4 class="spacing-1">Frontend Engineer</h4>
-						<p class="spacing-1">10up</p>
-						<p class="professional-description">
-							Developed responsive, high-performance websites for enterprise clients. Specialized in creating pixel-perfect designs, optimizing user experiences, and implementing robust accessibility standards.
-						</p>
-						<ul class="tech-stack">
-							<li>Vue.js</li>
-							<li>WordPress</li>
-							<li>Javascript ES6+</li>
-							<li>Performance Optimization</li>
-						</ul>
-					</div>
-					<hr />
-					<p class="spacing-year">2013 - 2018</p>
-					<div class="spacing-1">
-						<h4 class="spacing-1">Full-Stack WordPress Developer</h4>
-						<p class="spacing-1">Cornershop Creative</p>
-						<p class="professional-description">
-							Crafted custom WordPress solutions including advanced multi-user platforms, complex API integrations, and scalable content management systems. Managed full-cycle web development from concept to deployment.
-						</p>
-						<ul class="tech-stack">
-							<li>PHP</li>
-							<li>WordPress</li>
-							<li>Advanced Custom Fields</li>
-							<li>WooCommerce</li>
-							<li>Custom Themes and Plugins</li>
-						</ul>
-					</div>
-					<hr />
-					<p class="spacing-year">2011- 2012</p>
-					<div class="spacing-1">
-						<h4 class="spacing-1">WordPress Developer &amp; Web Designer</h4>
-						<p class="spacing-1">RYNO Technologies</p>
-						<p class="professional-description">
-							Designed custom WordPress themes with advanced content architecture, focusing on flexible and functional web solutions tailored to specific client needs.
-						</p>
-						<ul class="tech-stack">
-							<li>HTML5</li>
-							<li>CSS3</li>
-							<li>jQuery</li>
-							<li>WordPress</li>
-						</ul>
-					</div>
-					<hr />
-					<p class="spacing-year">2009- 2011</p>
-					<div class="spacing-1">
-						<h4 class="spacing-1">Instructional Technician</h4>
-						<p class="spacing-1">CNM Central New Mexico Community College</p>
-						<p class="professional-description">
-							Provided comprehensive technical support across programming and networking labs, demonstrating expertise in multiple programming languages and educational technology.
-						</p>
-						<ul class="tech-stack">
-							<li>Troubleshooting</li>
-							<li>Lab Management</li>
-							<li>IT Infrastructure</li>
-							<li>C++</li>
-							<li>Python</li>
-							<li>Java</li>
-							<li>Networking Fundamentals</li>
-						</ul>
-					</div>
-				</div>
-				<div class="card">
-					<hr />
-					<h3 class="spacing-1">Education</h3>
-					<div class="spacing-1">
-						<h4 class="spacing-1">CNM Central New Mexico Community College</h4>
-						<p class="spacing-1">Computer Information Systems, Web Technology (Digital Media)</p>
-						<p class="spacing-1">2006 - 2009</p>
-					</div>
-					<hr />
-				</div>
-			</section>
-			
-			<section id="portfolio" class="card-portfolio" aria-hidden="true">
-				<div class="card">
-					<h3 class="spacing-1">Trusted by Leading Brands<br/> to Elevate Their Digital Vision</h3>
-					<hr />
-					<!-- Group 1 -->
-					<div class="portfolio-grid">
-						<div class="portfolio-card">
-							<div class="portfolio-image">
-								<img src="images/projects/salesforce-logo.webp" alt="Salesforce Logo">
-							</div>
-						</div>
-			
-						<div class="portfolio-card">
-							<div class="portfolio-image">
-								<img src="images/projects/microsoft-logo.webp" alt="Microsoft Logo">
-							</div>
-						</div>
-			
-						<div class="portfolio-card">
-							<div class="portfolio-image">
-								<img src="images/projects/creditkarma-logo.webp" alt="Credit Karma Logo">
-							</div>
-						</div>
-					</div>
 
-					<!-- Group 2 -->
-					<div class="portfolio-grid portfolio-grid-4">
-						<div class="portfolio-card">
-							<div class="portfolio-image">
-								<img src="images/projects/meta-logo.webp" alt="Meta Logo">
-							</div>
-						</div>
-						<div class="portfolio-card">
-							<div class="portfolio-image">
-								<img src="images/projects/samsung-logo.webp" alt="Samsung Logo">
-							</div>
-						</div>
-						<div class="portfolio-card">
-							<div class="portfolio-image">
-								<img src="images/projects/starbucks-logo.webp" alt="Starbucks Logo">
-							</div>
-						</div>
-						<div class="portfolio-card">
-							<div class="portfolio-image">
-								<img src="images/projects/phillips66-logo.webp" alt="Phillips 66 Logo">
-							</div>
-						</div>
-					</div>
+    <section class="introduction" id="About">
+        <div class="introduction-content">
+            <div class="content-image">
+                <img
+                    width="493"
+                    height="493"
+                    alt="Profile Picture of Nick Ortiz wearing sungleasses in halftone pattern." 
+                    src="images/NickOrtiz-halftone.webp">
+            </div>
+            <div class="content-container">
+                <h2>Digital Architect & Strategic Innovator.</h2>
+                <p>
+                    <ul>
+                        <li><strong>Frontend Architecture:</strong> Crafting sophisticated JavaScript and React solutions that drive business growth.</li>
+                        <li><strong>WordPress Evolution:</strong> Pushing boundaries to unlock unprecedented platform capabilities.</li>
+                        <li><strong>Performance Engineering: </strong>Transforming sluggish systems into high-velocity digital assets.</li>
+                        <li><strong>Human-Centric Design: </strong>Creating seamless experiences for users across all abilities.</li>
+                    </ul>
+                </p>
+                <p>I transform complex technical challenges into elegant digital solutions. With over a decade leading remote teams, I've mastered the art of turning constraints into competitive advantages.</p>
+                <p>My work doesn't just solve problems—it creates opportunities. Every line of code advances your strategic vision and strengthens your market position.</p>
+            </div>
+        </div>
+    </section>
 
-					<!-- Group 3 -->
-					<div class="portfolio-grid portfolio-grid-4">
-						<div class="portfolio-card">
-							<div class="portfolio-image">
-								<img src="images/projects/hilton-logo.webp" alt="Hilton Logo">
-							</div>
-						</div>
-						<div class="portfolio-card">
-							<div class="portfolio-image">
-								<img src="images/projects/cleveland-clinic-logo.webp" alt="Cleveland Clinic Logo">
-							</div>
-						</div>
-						<div class="portfolio-card">
-							<div class="portfolio-image">
-								<img src="images/projects/TripAdvisor-logo.webp" alt="TripAdvisor Logo">
-							</div>
-						</div>
-						<div class="portfolio-card">
-							<div class="portfolio-image">
-								<img src="images/projects/boston-logo.webp" alt="Boston.com Logo">
-							</div>
-						</div>
-					</div>
+    <section class="experience" id="Experience"> 
+        <h2 class="heading large-text align-center">ProfessioNal<br/> Experience</h2>
+    </section>
 
-					<p class="left-align">
-						<strong>Other Projects include</strong><br/> 
-					</p>
-					<ul class="tech-stack left-align">
-						<li>Our bodies, Ourselves</li>
-						<li>Sunset Magazine</li>
-						<li>Stadium</li>
-						<li>My Jewish Learning</li>
-						<li>Boston University</li>
-						<li>Wild Symphony</li>
-						<li>STAT</li>
-						<li>Cliffs Amusement Park</li>
-						<li>Hinkle Family Fun Center</li>
-					</ul>
-				</div>
-			</section>
-		</section>
-	</main>
-	<script src="scripts/script.js"></script>
+    <section class="professional-experience">
+        <div class="content-container align-center">
+            
+            <div class="accordion">
+                <article class="accordion-item">
+                    <button class="accordion-header active" onclick="toggleAccordion(this)">
+                        <img src="images/history/fueled-emblem.avif" alt="Current Company logo" class="company-logo">
+                        <div class="company-info">
+                            <div class="company-name">10up / Fueled</div>
+                            <div class="company-period">2022 - Present</div>
+                        </div>
+                        <span class="arrow">
+                            <img 
+                                alt="directional arrow"
+                                src="images/arrow-icon.png">
+                        </span>
+                    </button>
+                    <div class="accordion-content active">
+                        <div class="content-inner">
+                            <h2 class="job-title">Senior Frontend Engineer</h2>
+                            <p class="job-description">Leading technical strategy for complex web projects, mentoring developers, and driving innovation in frontend development methodologies. Architecting scalable solutions that bridge creative vision with technical excellence.</p>
+                            <ul class="highlights">
+                                <li class="highlight-item">WCAG 2.1</li>
+                                <li class="highlight-item">React</li>
+                                <li class="highlight-item">Headless</li>
+                                <li class="highlight-item">Storybook</li>
+                                <li class="highlight-item">Full-Site Editing</li>
+                                <li class="highlight-item">Gutenberg</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <img src="images/history/10up-logo.avif" alt="Previous Corp logo" class="company-logo">
+                        <div class="company-info">
+                            <div class="company-name">10up</div>
+                            <div class="company-period">2018 - 2022</div>
+                        </div>
+                        <span class="arrow">
+                            <img 
+                                alt="directional arrow"
+                                src="images/arrow-icon.png">
+                        </span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <h2 class="job-title">Frontend Engineer</h2>
+                            <p class="job-description">Developed responsive, high-performance websites for enterprise clients. Specialized in creating pixel-perfect designs, optimizing user experiences, and implementing robust accessibility standards.</p>
+                            <ul class="highlights">
+                                <li class="highlight-item">Vue.js</li>
+                                <li class="highlight-item">WordPress</li>
+                                <li class="highlight-item">Javascript ES6+</li>
+                                <li class="highlight-item">PostCSS</li>
+                                <li class="highlight-item">Performance Optimization</li>
+                                <li class="highlight-item">NGINX</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <img src="images/history/cornershop-creative-logo.avif" alt="Previous Corp logo" class="company-logo">
+                        <div class="company-info">
+                            <div class="company-name">Cornershop Creative</div>
+                            <div class="company-period">2013 - 2018</div>
+                        </div>
+                        <span class="arrow">
+                            <img 
+                                alt="directional arrow"
+                                src="images/arrow-icon.png">
+                        </span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <h2 class="job-title">Full-Stack WordPress Developer</h2>
+                            <p class="job-description">Crafted custom WordPress solutions including advanced multi-user platforms, complex API integrations, and scalable content management systems. Managed full-cycle web development from concept to deployment.</p>
+                            <ul class="highlights">
+                                <li class="highlight-item">PHP</li>
+                                <li class="highlight-item">WordPress</li>
+                                <li class="highlight-item">Advanced Custom Fields</li>
+                                <li class="highlight-item">WooCommerce</li>
+                                <li class="highlight-item">SASS</li>
+                                <li class="highlight-item">LESS</li>
+                                <li class="highlight-item">Custom Themes & Plugins</li>
+                                <li class="highlight-item">LAMP</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <img src="images/history/ryno-logo.avif" alt="Previous Corp logo" class="company-logo">
+                        <div class="company-info">
+                            <div class="company-name">Ryno Technologies</div>
+                            <div class="company-period">2011 - 2012</div>
+                        </div>
+                        <span class="arrow">
+                            <img 
+                                alt="directional arrow"
+                                src="images/arrow-icon.png">
+                        </span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <h2 class="job-title">WordPress Developer & Designer</h2>
+                            <p class="job-description">Designed custom WordPress themes with advanced content architecture, focusing on flexible and functional web solutions tailored to specific client needs.</p>
+                            <ul class="highlights">
+                                <li class="highlight-item">HTML5</li>
+                                <li class="highlight-item">CSS3</li>
+                                <li class="highlight-item">jQuery</li>
+                                <li class="highlight-item">WordPress</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+                <article class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <img src="images/history/cnm-logo.avif" alt="Previous Corp logo" class="company-logo">
+                        <div class="company-info">
+                            <div class="company-name">Central New Mexico Community College</div>
+                            <div class="company-period">2009 - 2011</div>
+                        </div>
+                        <span class="arrow">
+                            <img 
+                                alt="directional arrow"
+                                src="images/arrow-icon.png">
+                        </span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <h2 class="job-title">Instructional Technician</h2>
+                            <p class="job-description">Provided comprehensive technical support across programming and networking labs, demonstrating expertise in multiple programming languages and educational technology.</p>
+                            <ul class="highlights">
+                                <li class="highlight-item">Troubleshooting</li>
+                                <li class="highlight-item">Lab Management</li>
+                                <li class="highlight-item">IT Infrastructure</li>
+                                <li class="highlight-item">C++</li>
+                                <li class="highlight-item">Python</li>
+                                <li class="highlight-item">Java</li>
+                                <li class="highlight-item">Networking Fundamentals</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+
+        <div class="content-container align-center">
+            <h2>Trusted by These Leading Brands <br/> to Elevate Their Digital Vision</h2>
+        </div>
+       <div class="experience-brands">
+        <div class="brand">
+            <img
+                alt="Salesforce Logo"
+                width="100"
+                height="100"
+                src="images/brands/salesforce-logo.webp">
+        </div>
+        <div class="brand">
+            <img
+                alt="Microsoft Logo" 
+                width="100"
+                height="100"
+                src="images/brands/microsoft-logo.webp">
+        </div>
+        <div class="brand">
+            <img
+                alt="CreditKarma Logo"
+                width="100"
+                height="100"
+                src="images/brands/creditkarma-logo.webp">
+        </div>
+        <div class="brand">
+            <img
+                alt="Meta Logo"
+                width="100"
+                height="100"
+                src="images/brands/meta-logo.webp">
+        </div>
+        <div class="brand">
+            <img
+                alt="Samsung Logo"
+                width="100"
+                height="100"
+                src="images/brands/samsung-logo.webp">
+        </div>
+        <div class="brand">
+            <img
+                alt="Starbucks Logo"
+                width="100"
+                height="100"
+                src="images/brands/starbucks-logo.webp">
+        </div>
+        <div class="brand">
+            <img
+                alt="Phillips66 Logo"
+                width="100"
+                height="100"
+                src="images/brands/phillips66-logo.webp">
+        </div>
+        <div class="brand">
+            <img
+                alt="Hilton Logo"
+                width="100"
+                height="100"
+                src="images/brands/hilton-logo.webp">
+        </div>
+        <div class="brand">
+            <img
+                alt="Cleveland Clinic Logo"
+                width="100"
+                height="100"
+                src="images/brands/cleveland-clinic-logo.webp">
+        </div>
+        <div class="brand">
+            <img
+                alt="TripAdvisor Logo"
+                width="100"
+                height="100"
+                src="images/brands/TripAdvisor-logo.webp">
+        </div>
+        <div class="brand">
+            <img
+                alt="Boston.com Logo"
+                width="100"
+                height="100"
+                src="images/brands/boston-logo.webp">
+        </div>
+       </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 NickOrtiz.com. All rights reserved.</p>
+    </footer>
+    <script src="scripts/script.js"></script>
 </body>
 </html>

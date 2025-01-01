@@ -62,6 +62,11 @@
             color: white;
             text-decoration: none;
             padding: 0 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-menu li a:hover {
+            color: #e6cc90;
         }
 
         .hamburger {
@@ -445,9 +450,8 @@
             <div></div>
         </div>
         <ul class="nav-menu">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Experience</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Experience">Experience</a></li>
         </ul>
     </nav>
     <section class="hero">
@@ -535,7 +539,7 @@
     </section>
 
 
-    <section class="introduction">
+    <section class="introduction" id="About">
         <div class="introduction-content">
             <div class="content-image">
                 <img src="NickOrtiz-halftone.webp">
@@ -556,7 +560,7 @@
         </div>
     </section>
 
-    <section class="experience"> 
+    <section class="experience" id="Experience"> 
         <h2 class="heading large-text align-center">ProfessioNal<br/> Experience</h2>
     </section>
 

@@ -74,7 +74,7 @@ nav {
     background-size: cover;
     background-position: bottom;
     border-bottom: 1px solid #e6cc90;
-    height: 35vh;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,6 +91,14 @@ nav {
 .hero-content h2 {
     letter-spacing: 2.3px;
     font-size: 2rem;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1.25rem 0 0;
+    display: none;
 }
 
 /* Cards Section */
@@ -366,12 +374,21 @@ h2 {
     gap: 1rem;
 }
 
-.highlight-item {
+.highlight-item,
+a.button {
     color: black;
     background: #e6cc90;
     padding: .5rem;
     border-radius: 8px;
     font-size: 13px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.highlight-item:hover,
+a.button:hover {
+    background: #1f1c19;
+    color: white;
 }
 
 .highlight-item::before {

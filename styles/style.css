@@ -98,7 +98,6 @@ nav {
     gap: 1rem;
     justify-content: center;
     padding: 1.25rem 0 0;
-    display: none;
 }
 
 /* Cards Section */
@@ -451,6 +450,55 @@ a.button:hover {
 @media (max-width: 768px) {
 
     .introduction-content {
-        flex-direction: column;    
+        flex-direction: column;
     }
+}
+
+.portfolio {
+    background-color: #000;
+    border-top: 1px solid #e6cc90;
+    border-bottom: 1px solid #e6cc90;
+}
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+}
+
+.portfolio-item {
+    background-color: #2a342a;
+    width: calc(100% / 4);
+    aspect-ratio: 1/1;
+    transition: all 0.3s;
+    position: relative;
+
+    @media (max-width: 768px) {
+        width: auto;
+    }
+}
+
+.portfolio-item:hover {
+    background-color: #242d24;
+}
+
+.portfolio-item:hover .portfolio-cover {
+    opacity: 0;
+}
+
+.portfolio-content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+    padding: 0 2rem;
+}
+
+.portfolio-cover {
+    position: absolute;
+}
+
+.hidden {
+    display: none;
 }

@@ -468,14 +468,25 @@ a.button:hover {
 
 .portfolio-item {
     background-color: #2a342a;
-    width: calc(100% / 4);
+    width: 100%;
     aspect-ratio: 1/1;
     transition: all 0.3s;
     position: relative;
 
-    @media (max-width: 768px) {
-        width: auto;
+    @media (min-width: 768px) and (max-width: 1400px) {
+        width: calc(100% / 2);
     }
+
+    @media (min-width: 1400px) {
+        width: calc(100% / 4);
+    }
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .portfolio-item:hover {
@@ -497,6 +508,7 @@ a.button:hover {
 
 .portfolio-cover {
     position: absolute;
+    width: 100%;
 }
 
 .hidden {
